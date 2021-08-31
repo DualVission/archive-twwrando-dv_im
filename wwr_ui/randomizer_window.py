@@ -5,7 +5,8 @@ from PySide2.QtWidgets import *
 from wwr_ui.ui_randomizer_window import Ui_MainWindow
 from wwr_ui.options import * #OPTIONS, NON_PERMALINK_OPTIONS, HIDDEN_OPTIONS, POTENTIALLY_UNBEATABLE_OPTIONS
 from wwr_ui.update_checker import check_for_updates, LATEST_RELEASE_DOWNLOAD_PAGE_URL
-from wwr_ui.inventory import * #INVENTORY_ITEMS, REGULAR_ITEMS, PROGRESSIVE_ITEMS, DUNGEON_NONPROGRESS_ITEMS, SORT_KEY, STNDRD_ITEMS
+from wwr_ui.inventory import * #INVENTORY_ITEMS, REGULAR_ITEMS, PROGRESSIVE_ITEMS, DUNGEON_NONPROGRESS_ITEMS, SORT_KEY_ITEMS, STNDRD_ITEMS
+from wwr_ui.entrances import *
 from wwr_ui.packedbits import PackedBitsReader, PackedBitsWriter
 
 import xml_func as xfx
@@ -95,6 +96,24 @@ class WWRandomizerWindow(QMainWindow):
     self.ui.remove_gear.clicked.connect(self.remove_from_starting_gear)
     self.starting_gear_model = QStringListModel()
     self.ui.starting_gear.setModel(self.starting_gear_model)
+
+    self.ui.add_vanilla_from_limited.clicked.connect(self.add_vanilla_from_limited)
+    self.ui.add_vanilla_from_full.clicked.connect(self.add_vanilla_from_full)
+    self.ui.add_limited_from_vanilla.clicked.connect(self.add_limited_from_vanilla)
+    self.ui.add_limited_from_full.clicked.connect(self.add_limited_from_full)
+    self.ui.add_full_from_limited.clicked.connect(self.add_full_from_limited)
+    self.ui.add_full_from_vanilla.clicked.connect(self.add_full_from_vanilla)
+
+    self.vanilla_entrances_model = QStringListModel()
+    self.vanilla_entrances_model.setStringList(REGULAR_ENTRANCES.copy())
+    self.filtered_ventrances = ModelFilterOut()
+    self.filtered_ventrances.setSourceModel(self.vanilla_entrances_model)
+    self.ui.vanilla_entrances.setModel(self.filtered_ventrances)
+
+    self.limited_entrances_model = QStringListModel()
+    self.ui.limited_entrances.setModel(self.limited_entrances_model)
+    self.full_entrances_model = QStringListModel()
+    self.ui.full_entrances.setModel(self.full_entrances_model)
 
     self.ui.additional_starting_min.valueChanged.connect(self.update_additional_spins_min)
     self.ui.additional_starting_max.valueChanged.connect(self.update_additional_spins_max)
@@ -225,14 +244,44 @@ class WWRandomizerWindow(QMainWindow):
 
   def add_to_starting_gear(self):
     self.move_selected_rows(self.ui.randomized_gear, self.ui.starting_gear)
-    self.ui.starting_gear.model().sort(0,key=lambda x:SORT_KEY.index(x))
+    self.ui.starting_gear.model().sort(0,key=lambda x:SORT_KEY_ITEMS.index(x))
     self.update_additional_spins(direction="None")
     self.update_settings()
 
   def remove_from_starting_gear(self):
     self.move_selected_rows(self.ui.starting_gear, self.ui.randomized_gear)
-    self.ui.randomized_gear.model().sourceModel().sort(0,key=lambda x:SORT_KEY.index(x))
+    self.ui.randomized_gear.model().sourceModel().sort(0,key=lambda x:SORT_KEY_ITEMS.index(x))
     self.update_additional_spins(direction="None")
+    self.update_settings()
+
+  def add_vanilla_from_limited(self):
+    self.move_selected_rows(self.ui.limited_entrances, self.ui.vanilla_entrances)
+    self.ui.vanilla_entrances.model().sourceModel().sort(0,key=lambda x:SORT_KEY_ENTRANCE.index(x))
+    self.update_settings()
+
+  def add_vanilla_from_full(self):
+    self.move_selected_rows(self.ui.full_entrances, self.ui.vanilla_entrances)
+    self.ui.vanilla_entrances.model().sourceModel().sort(0,key=lambda x:SORT_KEY_ENTRANCE.index(x))
+    self.update_settings()
+
+  def add_limited_from_vanilla(self):
+    self.move_selected_rows(self.ui.vanilla_entrances, self.ui.limited_entrances)
+    self.ui.limited_entrances.model().sort(0,key=lambda x:SORT_KEY_ENTRANCE.index(x))
+    self.update_settings()
+
+  def add_limited_from_full(self):
+    self.move_selected_rows(self.ui.full_entrances, self.ui.limited_entrances)
+    self.ui.limited_entrances.model().sort(0,key=lambda x:SORT_KEY_ENTRANCE.index(x))
+    self.update_settings()
+
+  def add_full_from_vanilla(self):
+    self.move_selected_rows(self.ui.vanilla_entrances, self.ui.full_entrances)
+    self.ui.full_entrances.model().sort(0,key=lambda x:SORT_KEY_ENTRANCE.index(x))
+    self.update_settings()
+
+  def add_full_from_limited(self):
+    self.move_selected_rows(self.ui.limited_entrances, self.ui.full_entrances)
+    self.ui.full_entrances.model().sort(0,key=lambda x:SORT_KEY_ENTRANCE.index(x))
     self.update_settings()
 
   def update_additional_spins_max(self):
@@ -804,7 +853,7 @@ class WWRandomizerWindow(QMainWindow):
           bit = STNDRD_ITEMS[i] in value
           bitswriter.write(bit, 1)
         unique_progressive_items = list(set(PROGRESSIVE_ITEMS))
-        unique_progressive_items.sort() #key=lambda x:SORT_KEY.index(x)
+        unique_progressive_items.sort() #key=lambda x:SORT_KEY_ITEMS.index(x)
         for item in unique_progressive_items:
           # No Progressive Sword and there's no more than
           # 3 of any other Progressive item so two bits per item
@@ -873,7 +922,7 @@ class WWRandomizerWindow(QMainWindow):
         self.move_selected_rows(self.ui.randomized_gear, self.ui.starting_gear)
         # Progressive items are all after regular items
         unique_progressive_items = list(set(PROGRESSIVE_ITEMS))
-        unique_progressive_items.sort() #key=lambda x:SORT_KEY.index(x)
+        unique_progressive_items.sort() #key=lambda x:SORT_KEY_ITEMS.index(x)
         for item in unique_progressive_items:
           amount = bitsreader.read(2)
           randamount = PROGRESSIVE_ITEMS.count(item) - amount

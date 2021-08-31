@@ -1115,10 +1115,6 @@ Convenient Ganon:
     & Progressive Wallet x1
   ) | Convenient Off
 
-Not Secret Cave Entrance Rando:
-  Option "randomize_entrances" Is "Disabled"
-  | Option "randomize_entrances" Is "Dungeons"
-
 
 
 Can DRC Backward:

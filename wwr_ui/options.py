@@ -99,10 +99,6 @@ OPTIONS = OrderedDict([
     "Sets where dungeon keys can appear in the game."
   ),
   (
-    "randomize_entrances",
-    "Shuffles around which dungeon entrances/secret cave entrances take you into which dungeons/secret caves.\n(No effect on Forsaken Fortress or Ganon's Tower.)"
-  ),
-  (
     "randomize_charts",
     "Randomizes which sector is drawn on each Triforce/Treasure Chart."
   ),
@@ -550,6 +546,26 @@ OPTIONS = OrderedDict([
     "randomize_enemies",
     "Randomizes the placement of non-boss enemies."
   ),
+  (
+    "vanilla_entrances",
+    "Entrances that lead to their base game location."
+  ),
+  (
+    "limited_entrances",
+    "Entrances that lead to others of their same category, but not other entrances.<br/><u>This resolves after Randomized Full-List Entrances, conflicts are not prioritized.</u>"
+  ),
+  (
+    "full_entrances",
+    "Entrances that lead to others of this list, regardless of category.<br/><u>This resolves before Randomized Limited-List Entrances, conflicts are prioritized.</u>"
+  )
+])
+
+REMOVED_OPTIONS = OrderedDict([
+
+(
+  "randomize_entrances",
+  "Shuffles around which dungeon entrances/secret cave entrances take you into which dungeons/secret caves.\n(No effect on Forsaken Fortress or Ganon's Tower.)"
+),
 ])
 
 NON_PERMALINK_OPTIONS = [
@@ -562,6 +578,7 @@ NON_PERMALINK_OPTIONS = [
   "sail_color",
   "custom_color_preset",
   "remove_title_and_ending_videos",
+  "vanilla_entrances"
   # Note: Options that affect music must be included in the permalink because music duration affects gameplay in some cases, like not being allowed to close the item get textbox until the item get jingle has finished playing.
   # Note: randomize_enemy_palettes has special logic to be in the permalink when enemy rando is on, but otherwise just have an unused placeholder in the permalink.
 ]

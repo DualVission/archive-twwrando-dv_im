@@ -209,6 +209,13 @@ class Randomizer:
       ("Inlet on Cliff Plateau Isles", "Cliff Plateau Isles Floating Plants Cave"),
       ("Firth on Horseshoe Island", "Horseshoe Island Mothula Cave"),
       ("Cave Opening on Star Island", "Star Island Combat Cave"),
+
+      ("Northern Fairy Conch", "Northern Fairy Fountain"),
+      ("Eastern Fairy Conch", "Eastern Fairy Fountain"),
+      ("Western Fairy Conch", "Western Fairy Fountain"),
+      ("Hole in the Forest of Fairies", "Forest of Fairies Fountain"),
+      ("Thorned Fairy Conch", "Thorned Fairy Fountain"),
+      ("Southern Fairy Conch", "Southern Fairy Fountain")
     ])
 
     self.dungeon_and_cave_island_locations = OrderedDict([
@@ -238,6 +245,13 @@ class Randomizer:
       ("Inlet on Cliff Plateau Isles", "Cliff Plateau Isles"),
       ("Firth on Horseshoe Island", "Horseshoe Island"),
       ("Cave Opening on Star Island", "Star Island"),
+
+      ("Northern Fairy Fountain", "Northern Fairy Island"),
+      ("Eastern Fairy Fountain", "Eastern Fairy Island"),
+      ("Western Fairy Fountain", "Western Fairy Island"),
+      ("Forest of Fairies Fountain", "Outset Island"),
+      ("Thorned Fairy Fountain", "Thorned Fairy Island"),
+      ("Southern Fairy Fountain", "Southern Fairy Island")
     ])
 
     # Default starting island (Outset) if the starting island randomizer is not on.
@@ -443,7 +457,7 @@ class Randomizer:
     options_completed += 1
     yield("Randomizing...", options_completed)
 
-    if self.options.get("randomize_entrances") not in ["Disabled", None]:
+    if self.options.get("full_entrances") or self.options.get("limited_entrances"):
       self.reset_rng()
       entrances.randomize_entrances(self)
 

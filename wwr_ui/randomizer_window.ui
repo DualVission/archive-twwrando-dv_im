@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>973</height>
+    <width>825</width>
+    <height>865</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,8 +28,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>976</width>
-         <height>849</height>
+         <width>807</width>
+         <height>728</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="layout_for_main_scroll">
@@ -121,68 +121,6 @@
             </item>
             <item>
              <layout class="QGridLayout" name="grid_for_logic">
-              <item row="1" column="1" colspan="3">
-               <widget class="QLabel" name="logic_desc">
-                <property name="text">
-                 <string/>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <spacer name="left_spacer">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="0" column="1">
-               <widget class="QLabel" name="label_for_logic_mod">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>489</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Logic Type</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="4">
-               <spacer name="right_spacer">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>5</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="0" column="3">
-               <spacer name="logic_spacer">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>5</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
               <item row="0" column="2">
                <widget class="QComboBox" name="logic_mod">
                 <property name="minimumSize">
@@ -235,39 +173,80 @@
                 </item>
                </widget>
               </item>
+              <item row="1" column="1" colspan="3">
+               <widget class="QLabel" name="logic_desc">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <spacer name="left_spacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="3">
+               <spacer name="logic_spacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>13</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_for_logic_mod">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>489</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Logic Type</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <spacer name="right_spacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>13</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
              </layout>
             </item>
             <item>
              <widget class="QGroupBox" name="group_for_locations">
               <property name="title">
-               <string>Where Should Progress Items Appear?</string>
+               <string>Where can progression be?</string>
               </property>
               <layout class="QGridLayout" name="grid_for_locations">
                <item row="1" column="2">
                 <widget class="QCheckBox" name="progression_island_puzzles">
                  <property name="text">
                   <string>Island Puzzles</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="3">
-                <widget class="QCheckBox" name="progression_long_combat_trials">
-                 <property name="text">
-                  <string>Long Combat Trials</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="2">
-                <widget class="QCheckBox" name="progression_mixed_secret_caves">
-                 <property name="text">
-                  <string>Mixed Secret Caves</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="3">
-                <widget class="QCheckBox" name="progression_combat_secret_caves">
-                 <property name="text">
-                  <string>Combat Secret Caves</string>
                  </property>
                 </widget>
                </item>
@@ -282,6 +261,27 @@
                 <widget class="QCheckBox" name="progression_big_octos_gunboats">
                  <property name="text">
                   <string>Big Octos and Gunboats</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QCheckBox" name="progression_long_combat_trials">
+                 <property name="text">
+                  <string>Long Combat Trials</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QCheckBox" name="progression_combat_secret_caves">
+                 <property name="text">
+                  <string>Combat Secret Caves</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QCheckBox" name="progression_mixed_secret_caves">
+                 <property name="text">
+                  <string>Mixed Secret Caves</string>
                  </property>
                 </widget>
                </item>
@@ -319,13 +319,6 @@
                  </property>
                 </widget>
                </item>
-               <item row="4" column="1">
-                <widget class="QCheckBox" name="progression_eye_reef_chests">
-                 <property name="text">
-                  <string>Eye Reef Chests</string>
-                 </property>
-                </widget>
-               </item>
                <item row="4" column="3">
                 <widget class="QCheckBox" name="progression_misc">
                  <property name="text">
@@ -336,6 +329,13 @@
                  </property>
                  <property name="checked">
                   <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QCheckBox" name="progression_eye_reef_chests">
+                 <property name="text">
+                  <string>Eye Reef Chests</string>
                  </property>
                 </widget>
                </item>
@@ -363,6 +363,23 @@
                  </property>
                 </widget>
                </item>
+               <item row="2" column="1">
+                <widget class="QCheckBox" name="progression_long_sidequests">
+                 <property name="text">
+                  <string>Long Sidequests</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="2">
+                <widget class="QCheckBox" name="progression_free_gifts">
+                 <property name="text">
+                  <string>Free Gifts</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
                <item row="3" column="2">
                 <widget class="QCheckBox" name="progression_expensive_purchases">
                  <property name="text">
@@ -377,23 +394,6 @@
                 <widget class="QCheckBox" name="progression_short_sidequests">
                  <property name="text">
                   <string>Short Sidequests</string>
-                 </property>
-                 <property name="checked">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="1">
-                <widget class="QCheckBox" name="progression_long_sidequests">
-                 <property name="text">
-                  <string>Long Sidequests</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="2">
-                <widget class="QCheckBox" name="progression_free_gifts">
-                 <property name="text">
-                  <string>Free Gifts</string>
                  </property>
                  <property name="checked">
                   <bool>true</bool>
@@ -433,96 +433,7 @@
                <string>Dungeon Randomization Options</string>
               </property>
               <layout class="QGridLayout" name="grid_for_settings_secondary">
-               <item row="1" column="0">
-                <layout class="QHBoxLayout" name="layout_for_keymode" stretch="2,1,2">
-                 <item>
-                  <widget class="QLabel" name="label_for_keymode">
-                   <property name="text">
-                    <string>Key Placement</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <spacer name="spacer_for_keymode">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="keymode">
-                   <item>
-                    <property name="text">
-                     <string>Standard</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Cross Dungeon</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Key-Lunacy</string>
-                    </property>
-                   </item>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-               <item row="2" column="2">
-                <layout class="QHBoxLayout" name="layout_for_race_mode">
-                 <item>
-                  <widget class="QLabel" name="label_for_race_mode">
-                   <property name="text">
-                    <string>Dungeon Mode</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <spacer name="spacer_for_race_mode">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="race_mode">
-                   <property name="currentIndex">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>Default</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Mixed</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Race</string>
-                    </property>
-                   </item>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-               <item row="2" column="4">
+               <item row="0" column="4" colspan="2">
                 <layout class="QHBoxLayout" name="layout_for_num_dungeon_race_mode">
                  <item>
                   <widget class="QLabel" name="label_for_num_dungeon_race_mode">
@@ -538,7 +449,7 @@
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_6">
+                  <spacer name="spacer_for_num_dungeon_race_mode">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -598,12 +509,62 @@
                    </item>
                   </widget>
                  </item>
+                </layout>
+               </item>
+               <item row="1" column="0" colspan="3">
+                <widget class="QCheckBox" name="compass_map_pool_with_keys">
+                 <property name="text">
+                  <string>Pool Dungeon Items with Keys</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2" colspan="2">
+                <layout class="QHBoxLayout" name="layout_for_race_mode" stretch="1,0,2">
                  <item>
-                  <widget class="QWidget" name="widget_9" native="true"/>
+                  <widget class="QLabel" name="label_for_race_mode">
+                   <property name="text">
+                    <string>Dungeon Mode</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="spacer_for_race_mode">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="race_mode">
+                   <property name="currentIndex">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Default</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Mixed</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Race</string>
+                    </property>
+                   </item>
+                  </widget>
                  </item>
                 </layout>
                </item>
-               <item row="1" column="2">
+               <item row="1" column="3" colspan="3">
                 <widget class="QCheckBox" name="add_shortcut_warps_between_dungeons">
                  <property name="text">
                   <string>Add Shortcuts Between Dungeons</string>
@@ -613,43 +574,17 @@
                  </property>
                 </widget>
                </item>
-               <item row="1" column="3">
-                <spacer name="horizontalSpacer_17">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item row="2" column="0">
-                <widget class="QCheckBox" name="compass_map_pool_with_keys">
-                 <property name="text">
-                  <string>Pool Dungeon Items with Keys</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="4">
-                <layout class="QHBoxLayout" name="layout_for_starting_triforce_shards">
+               <item row="0" column="0" colspan="2">
+                <layout class="QHBoxLayout" name="layout_for_keymode" stretch="0,1,2">
                  <item>
-                  <widget class="QLabel" name="label_for_num_starting_triforce_shards">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
+                  <widget class="QLabel" name="label_for_keymode">
                    <property name="text">
-                    <string>Starting Triforce Shards</string>
+                    <string>Key Placement</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_5">
+                  <spacer name="spacer_for_keymode">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -662,181 +597,20 @@
                   </spacer>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="num_starting_triforce_shards">
-                   <property name="maximumSize">
-                    <size>
-                     <width>84</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="currentText">
-                    <string>0</string>
-                   </property>
+                  <widget class="QComboBox" name="keymode">
                    <item>
                     <property name="text">
-                     <string>0</string>
+                     <string>Standard</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>1</string>
+                     <string>Cross Dungeon</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>2</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>3</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>4</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>5</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>6</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>7</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>8</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Random</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Mirror Dungeon Number</string>
-                    </property>
-                   </item>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QWidget" name="widget" native="true"/>
-                 </item>
-                </layout>
-               </item>
-               <item row="1" column="1">
-                <spacer name="horizontalSpacer_16">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item row="0" column="2" colspan="3">
-                <layout class="QHBoxLayout" name="layout_for_randomize_entrances" stretch="2,1,2">
-                 <item>
-                  <widget class="QLabel" name="label_for_randomize_entrances">
-                   <property name="text">
-                    <string>Randomize Entrances</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <spacer name="spacer_for_randomize_entrances">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="randomize_entrances">
-                   <item>
-                    <property name="text">
-                     <string>Disabled</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Dungeons</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Secret Caves</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Dungeons &amp; Secret Caves (Separately)</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Dungeons &amp; Secret Caves (Together)</string>
-                    </property>
-                   </item>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-               <item row="0" column="0">
-                <layout class="QHBoxLayout" name="layout_for_sword" stretch="1,0,1">
-                 <item>
-                  <widget class="QLabel" name="label_for_sword_mode">
-                   <property name="text">
-                    <string>Sword Mode</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <spacer name="spacer_for_sword_mode">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="sword_mode">
-                   <item>
-                    <property name="text">
-                     <string>Start with Hero's Sword</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>No Starting Sword</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Swordless</string>
+                     <string>Key-Lunacy</string>
                     </property>
                    </item>
                   </widget>
@@ -852,6 +626,54 @@
                <string>Additional Options</string>
               </property>
               <layout class="QGridLayout" name="grid_for_convenience">
+               <item row="1" column="4">
+                <layout class="QHBoxLayout" name="layout_for_convenience_option" stretch="2,1,2">
+                 <item>
+                  <widget class="QLabel" name="label_for_convenience_option">
+                   <property name="text">
+                    <string>Item Pool</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="spacer_for_convenience_option">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="convenience_option">
+                   <item>
+                    <property name="text">
+                     <string>Default</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Convenient</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Plentiful</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Plentiful and Convenient</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
                <item row="2" column="4">
                 <layout class="QHBoxLayout" name="layout_for_can_chain_charts" stretch="2,1,2">
                  <item>
@@ -895,10 +717,10 @@
                  </item>
                 </layout>
                </item>
-               <item row="2" column="0">
-                <widget class="QCheckBox" name="reveal_full_sea_chart">
+               <item row="0" column="2">
+                <widget class="QCheckBox" name="instant_text_boxes">
                  <property name="text">
-                  <string>Reveal Full Sea Chart</string>
+                  <string>Instant Text Boxes</string>
                  </property>
                  <property name="checked">
                   <bool>true</bool>
@@ -912,27 +734,10 @@
                  </property>
                 </widget>
                </item>
-               <item row="1" column="0">
-                <widget class="QCheckBox" name="randomize_starting_island">
-                 <property name="text">
-                  <string>Randomize Starting Island</string>
-                 </property>
-                </widget>
-               </item>
                <item row="0" column="0">
                 <widget class="QCheckBox" name="swift_sail">
                  <property name="text">
                   <string>Use Swift Sail</string>
-                 </property>
-                 <property name="checked">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="2">
-                <widget class="QCheckBox" name="instant_text_boxes">
-                 <property name="text">
-                  <string>Instant Text Boxes</string>
                  </property>
                  <property name="checked">
                   <bool>true</bool>
@@ -949,6 +754,23 @@
                  </property>
                 </widget>
                </item>
+               <item row="2" column="0">
+                <widget class="QCheckBox" name="reveal_full_sea_chart">
+                 <property name="text">
+                  <string>Reveal Full Sea Chart</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QCheckBox" name="randomize_starting_island">
+                 <property name="text">
+                  <string>Randomize Starting Island</string>
+                 </property>
+                </widget>
+               </item>
                <item row="1" column="2">
                 <widget class="QCheckBox" name="remove_title_and_ending_videos">
                  <property name="text">
@@ -959,21 +781,8 @@
                  </property>
                 </widget>
                </item>
-               <item row="0" column="3">
-                <spacer name="horizontalSpacer_15">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
                <item row="0" column="1">
-                <spacer name="horizontalSpacer_13">
+                <spacer name="spacer_for_secondary_0">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -985,53 +794,18 @@
                  </property>
                 </spacer>
                </item>
-               <item row="1" column="4">
-                <layout class="QHBoxLayout" name="layout_for_convenience_option" stretch="2,1,2">
-                 <item>
-                  <widget class="QLabel" name="convenience_option_label">
-                   <property name="text">
-                    <string>Item Pool</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_21">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="convenience_option">
-                   <item>
-                    <property name="text">
-                     <string>Default</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Convenient</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Plentiful</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Plentiful and Convenient</string>
-                    </property>
-                   </item>
-                  </widget>
-                 </item>
-                </layout>
+               <item row="0" column="3">
+                <spacer name="spacer_for_secondary_1">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
                </item>
               </layout>
              </widget>
@@ -1101,11 +875,15 @@
                <string>Advanced Options</string>
               </property>
               <layout class="QGridLayout" name="grid_for_advanced">
-               <item row="0" column="6">
-                <widget class="QWidget" name="widget_4" native="true"/>
-               </item>
-               <item row="0" column="5">
-                <widget class="QWidget" name="widget_3" native="true"/>
+               <item row="0" column="2">
+                <widget class="QCheckBox" name="randomize_enemy_palettes">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="text">
+                  <string>Randomize Enemy Palettes</string>
+                 </property>
+                </widget>
                </item>
                <item row="0" column="4">
                 <widget class="QCheckBox" name="invert_camera_x_axis">
@@ -1114,15 +892,18 @@
                  </property>
                 </widget>
                </item>
-               <item row="1" column="2">
-                <widget class="QCheckBox" name="randomize_enemies">
-                 <property name="enabled">
-                  <bool>false</bool>
+               <item row="0" column="1">
+                <spacer name="spacer_for_advanced_0">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
                  </property>
-                 <property name="text">
-                  <string>Randomize Enemy Locations</string>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
                  </property>
-                </widget>
+                </spacer>
                </item>
                <item row="1" column="4">
                 <widget class="QCheckBox" name="disable_tingle_chests_with_tingle_bombs">
@@ -1137,18 +918,18 @@
                  </property>
                 </widget>
                </item>
-               <item row="0" column="2">
-                <widget class="QCheckBox" name="randomize_enemy_palettes">
+               <item row="1" column="2">
+                <widget class="QCheckBox" name="randomize_enemies">
                  <property name="enabled">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                  <property name="text">
-                  <string>Randomize Enemy Palettes</string>
+                  <string>Randomize Enemy Locations</string>
                  </property>
                 </widget>
                </item>
-               <item row="0" column="1">
-                <spacer name="horizontalSpacer_11">
+               <item row="0" column="3">
+                <spacer name="spacer_for_advanced_1">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
@@ -1177,19 +958,6 @@
                  </property>
                 </widget>
                </item>
-               <item row="0" column="3">
-                <spacer name="horizontalSpacer_12">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
               </layout>
              </widget>
             </item>
@@ -1202,7 +970,7 @@
            <attribute name="title">
             <string>Starting Items</string>
            </attribute>
-           <layout class="QVBoxLayout" name="layout_for_items_selection" stretch="20,0,0,1">
+           <layout class="QVBoxLayout" name="layout_for_items_selection" stretch="1,0,0,0,0">
             <item>
              <layout class="QHBoxLayout" name="layout_for_starting_items">
               <item>
@@ -1254,12 +1022,12 @@
                  <widget class="QPushButton" name="remove_gear">
                   <property name="minimumSize">
                    <size>
-                    <width>0</width>
+                    <width>60</width>
                     <height>80</height>
                    </size>
                   </property>
                   <property name="text">
-                   <string>&lt;-</string>
+                   <string>🢀</string>
                   </property>
                  </widget>
                 </item>
@@ -1267,12 +1035,12 @@
                  <widget class="QPushButton" name="add_gear">
                   <property name="minimumSize">
                    <size>
-                    <width>0</width>
+                    <width>60</width>
                     <height>80</height>
                    </size>
                   </property>
                   <property name="text">
-                   <string>-&gt;</string>
+                   <string>🢂</string>
                   </property>
                  </widget>
                 </item>
@@ -1291,6 +1059,13 @@
                    </size>
                   </property>
                  </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="reset_gear">
+                  <property name="text">
+                   <string>Reset Gear</string>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </item>
@@ -1528,6 +1303,151 @@
              </layout>
             </item>
             <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <layout class="QHBoxLayout" name="layout_for_sword" stretch="0,0,1">
+                <item>
+                 <widget class="QLabel" name="label_for_sword_mode">
+                  <property name="text">
+                   <string>Sword Mode</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="spacer_for_sword_mode">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="sword_mode">
+                  <item>
+                   <property name="text">
+                    <string>Start with Hero's Sword</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>No Starting Sword</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Swordless</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="layout_for_starting_triforce_shards">
+                <item>
+                 <widget class="QLabel" name="label_for_num_starting_triforce_shards">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Starting Triforce Shards</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="spacer_for_num_starting_triforce_shards">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="num_starting_triforce_shards">
+                  <property name="maximumSize">
+                   <size>
+                    <width>84</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="currentText">
+                   <string>0</string>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>1</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>3</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>4</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>5</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>6</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>7</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>8</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Random</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Mirror Dungeon Number</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
              <spacer name="spacer_below_starting_health">
               <property name="orientation">
                <enum>Qt::Vertical</enum>
@@ -1542,13 +1462,231 @@
             </item>
            </layout>
           </widget>
+          <widget class="QWidget" name="tab_for_entrances">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <attribute name="title">
+            <string>Entrance Randomization</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="layout_for_entrance_selection" stretch="20">
+            <item>
+             <layout class="QHBoxLayout" name="layout_for_entrance_fields" stretch="3,0,3">
+              <item>
+               <layout class="QVBoxLayout" name="layout_for_vanilla_entrances">
+                <item>
+                 <widget class="QLabel" name="label_for_vanilla_entrances">
+                  <property name="text">
+                   <string>Vanilla Entrances</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QListView" name="vanilla_entrances"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="layout_for_to_non_vanilla_options">
+                <item>
+                 <spacer name="space_non_vanilla_top">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="add_vanilla_from_limited">
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>80</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>🢀</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="add_limited_from_vanilla">
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>80</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>🢂</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="space_non_vanilla_mid">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="add_vanilla_from_full">
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>80</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>🢀</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="add_full_from_vanilla">
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>80</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>🢂</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="space_non_vanilla_bot">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="reset_entrances">
+                  <property name="text">
+                   <string>Reset Entrances</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="layout_for_randomized_entrances" stretch="2,0,2">
+                <item>
+                 <layout class="QVBoxLayout" name="layout_for_limited_entrances">
+                  <item>
+                   <widget class="QLabel" name="label_for_limited_entrances">
+                    <property name="text">
+                     <string>Randomized Limited-List Entrances</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QListView" name="limited_entrances"/>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="layout_for_between_random_entrances" stretch="2,2,2,3">
+                  <item>
+                   <spacer name="spacer_for_limited_from_full">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="add_limited_from_full">
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>60</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>🢁</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="add_full_from_limited">
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>60</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>🢃</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="spacer_for_full_from_limited">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="layout_for_full_entrances">
+                  <item>
+                   <widget class="QLabel" name="label_for_full_entrances">
+                    <property name="text">
+                     <string>Randomized Full-List Entrances</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QListView" name="full_entrances"/>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
           <widget class="QWidget" name="tab_for_locales">
            <attribute name="title">
             <string>Banned Locales</string>
            </attribute>
            <layout class="QVBoxLayout" name="layout_for_locales" stretch="9,3,6">
             <item>
-             <layout class="QGridLayout" name="grid_for_locales">
+             <layout class="QGridLayout" name="grid_for_locales_island">
               <item row="4" column="2">
                <widget class="QCheckBox" name="locale_stone_watcher">
                 <property name="text">
@@ -1929,7 +2067,7 @@
              </layout>
             </item>
             <item>
-             <layout class="QGridLayout" name="grid_for_locales">
+             <layout class="QGridLayout" name="grid_for_locales_dungeon">
               <item row="1" column="4">
                <widget class="QCheckBox" name="locale_deep_et">
                 <property name="text">
