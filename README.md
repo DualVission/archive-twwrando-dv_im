@@ -1,3 +1,5 @@
+No longer updated
+**You can download the randomizer here: https://github.com/tanjo/wwrando/releases/latest instead** 
 
 ### About  
 
